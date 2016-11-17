@@ -124,11 +124,11 @@ public class lab1
 			IntegerString integerstring1 = new IntegerString();
 			StringBuilder stringbuff1 = new StringBuilder();
 			for (String element : stringarray1) 
-			{	/*try*/if("0123456789".indexOf(element.charAt(0))!=-1)
+			{	if("0123456789".indexOf(element.charAt(0))!=-1)
 				{	/*如果是数字，就乘起来*/
 					number1 = Integer.parseInt(element);
 					constant *= number1;} 
-				else /*(Exception e) */
+				else
 				{	varibles.add(element);}}//如果是变量，就加到字符串数组里面
 			
 			for (String var : varibles)
@@ -139,8 +139,8 @@ public class lab1
 			arraylist.add(integerstring1);}
 		
 		for (IntegerString intstr : arraylist)//合并同类项
-		{ 	String key = intstr.stringvarible;/*变量*/
-			int value = intstr.number;/*系数*/
+		{ 	String key = intstr.stringvarible;
+			int value = intstr.number;
 			if (map.containsKey(key)==false) 
 			{	map.put(key, value);}//如果变量不同，直接将键值对加入map 
 			else if (map.containsKey(key)==true) 
@@ -151,6 +151,6 @@ public class lab1
 		{	stringbuff.append(map.get(keyinset).toString() + keyinset + '+');}
 		
 		int len = stringbuff.length();
-		stringbuff.deleteCharAt(len - 1); //去掉最后一个加号
+		stringbuff.deleteCharAt(len - 1);
 		System.out.println(stringbuff.toString());
 		return stringbuff.toString();}}
