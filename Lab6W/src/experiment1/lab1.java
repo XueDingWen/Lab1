@@ -120,9 +120,9 @@ public class lab1
 		{ 	int constant = 1;
 			int number1;
 			List<String> varibles = new ArrayList<String>();/*变量*/
-			String[] stringarray1 = str.split("\\*");/*按乘号分割*/
 			IntegerString integerstring1 = new IntegerString();
 			StringBuilder stringbuff1 = new StringBuilder();
+			String[] stringarray1 = str.split("\\*");/*按乘号分割*/
 			for (String element : stringarray1) 
 			{	if("0123456789".indexOf(element.charAt(0))!=-1)
 				{	/*如果是数字，就乘起来*/
