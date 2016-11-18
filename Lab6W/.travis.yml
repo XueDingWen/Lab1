@@ -4,13 +4,4 @@ jdk:
   - oraclejdk8
   - oraclejdk7
   - openjdk6sudo: false
-sudo: false
-addons:
-  apt:
-    packages:
-      - oracle-java8-installer
-script:
-  - jdk_switcher use oraclejdk8
-  - # do stuff with Java 8
-  - jdk_switcher use oraclejdk7
-  - # do stuff with Java 7
+
